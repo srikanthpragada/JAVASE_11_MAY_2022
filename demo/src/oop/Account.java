@@ -5,6 +5,10 @@ public class Account {
    private int acno;
    private double balance;
    
+   // Constructor 
+   public Account(int no) {
+	   acno = no;
+   }
    // Methods 
    public void deposit(double amount) {
 	   balance += amount;
