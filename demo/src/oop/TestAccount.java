@@ -8,7 +8,7 @@ public class TestAccount {
 		 a1.deposit(10000);   // calling method 
 		 System.out.println(a1.getBalance());
 		 
-		 Account a2 = new Account(102);
+		 Account a2 = new Account(102, 10000);
 		 a2.deposit(100000);
 		 
 		 

@@ -9,6 +9,10 @@ public class Account {
    public Account(int no) {
 	   acno = no;
    }
+   public Account(int no, double bal) {
+	   acno = no;
+	   balance = bal;
+   }
    // Methods 
    public void deposit(double amount) {
 	   balance += amount;
