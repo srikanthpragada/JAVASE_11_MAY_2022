@@ -4,17 +4,17 @@ public class Product {
 	private String name;
 	private double price;
 
-	public Product(String n, double p) {
-		name = n;
-		price = p;
+	public Product(String name, double price) {
+		this.name = name;
+		this.price = price;
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public double getPrice() {
-		return price;
+		return this.price;
 	}
 
 	public double getSellingPrice() {

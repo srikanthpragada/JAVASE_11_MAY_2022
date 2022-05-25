@@ -1,24 +1,32 @@
 package oop;
 
 public class Account {
-   // Instance variables
-   private int acno;
-   private double balance;
-   
-   // Constructor 
-   public Account(int no) {
-	   acno = no;
-   }
-   public Account(int no, double bal) {
-	   acno = no;
-	   balance = bal;
-   }
-   // Methods 
-   public void deposit(double amount) {
-	   balance += amount;
-   }
-   
-   public double getBalance() {
-	   return balance;
-   }
+	// Instance variables
+	private int acno;
+	private double balance;
+	// Class variable
+	private static int minbal = 5000;
+	
+	public static int getMinbal() {
+		return minbal;
+	}
+
+	// Constructor
+	public Account(int acno) {
+		this.acno = acno;
+	}
+
+	public Account(int acno, double balance) {
+		this(acno); // calling constructor 
+		this.balance = balance;
+	}
+
+	// Methods
+	public void deposit(double amount) {
+		this.balance += amount;
+	}
+
+	public double getBalance() {
+		return this.balance;
+	}
 }
