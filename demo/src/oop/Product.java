@@ -3,6 +3,15 @@ package oop;
 public class Product {
 	private String name;
 	private double price;
+	private static double taxrate = 5;
+	
+	public static double getTaxrate() {
+		return taxrate;
+	}
+
+	public static void setTaxrate(double taxrate) {
+		Product.taxrate = taxrate;
+	}
 
 	public Product(String name, double price) {
 		this.name = name;
@@ -18,11 +27,11 @@ public class Product {
 	}
 
 	public double getSellingPrice() {
-		return price * 1.05;
+		return this.price + this.price * Product.taxrate / 100;
 	}
 
-	public void setPrice(double newPrice) {
-		price = newPrice;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
 }
