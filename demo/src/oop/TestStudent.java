@@ -13,6 +13,9 @@ class Student {
 		System.out.println(this.admno);
 		System.out.println(this.name);
 	}
+	public int getMarks() {
+		 return 0;
+	}
 }
 
 class JavaStudent extends Student {
@@ -29,9 +32,6 @@ class JavaStudent extends Student {
 		System.out.println(this.labMarks);
 	}
 
-	public int getMarks() {
-		return this.labMarks;
-	}
 }
 
 class PythonStudent extends Student {
@@ -56,11 +56,17 @@ class PythonStudent extends Student {
 public class TestStudent {
 
 	public static void main(String[] args) {
-        Student s = new JavaStudent(1, "Jason", 90);
+        Student s = new JavaStudent(1, "Jason", 90);  // Upcasting 
         s.print(); // runtime polymorphism 
+        
+        if (s.getMarks() > 60)  // Runtime polymorphism 
+        	System.out.println("Passed");
+        else
+        	System.out.println("Failed");
         
         s = new PythonStudent(2,"James", 80);
         s.print();
+      
 	}
 
 }
