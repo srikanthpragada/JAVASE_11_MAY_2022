@@ -1,6 +1,6 @@
 package oop;
 
-class Student {
+abstract class Student {
 	private int admno;
 	private String name;
 
@@ -8,14 +8,12 @@ class Student {
 		this.admno = admno;
 		this.name = name;
 	}
-
 	public void print() {
 		System.out.println(this.admno);
 		System.out.println(this.name);
 	}
-	public int getMarks() {
-		 return 0;
-	}
+	public abstract int getMarks();
+		 
 }
 
 class JavaStudent extends Student {
@@ -32,6 +30,12 @@ class JavaStudent extends Student {
 		System.out.println(this.labMarks);
 	}
 
+	@Override
+	public int getMarks() {
+		return this.labMarks;
+	}
+
+	
 }
 
 class PythonStudent extends Student {
