@@ -70,6 +70,8 @@ public class TestStudent {
         
         s = new PythonStudent(2,"James", 80);
         s.print();
+        
+        double v = Math.PI * 10;
       
 	}
 
