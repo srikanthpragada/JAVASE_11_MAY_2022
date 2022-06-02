@@ -9,6 +9,10 @@ class Person {
 		this.name = name;
 		this.age = age;
 	}
+	
+	public int hashCode() {
+		return this.age; 
+	}
 
 	@Override
 	public String toString() {
@@ -17,10 +21,11 @@ class Person {
 	
 	@Override 
 	public boolean equals(Object obj) {
-		 Person other = (Person) obj;  // downcasting 
-		 return this.name.equals(other.name) && this.age == other.age;
+		if (obj instanceof Person other) {
+   		     return this.name.equals(other.name) && this.age == other.age;
+		}
+		return false; 
 	}
-
 }
 
 public class TestPerson {
@@ -29,9 +34,15 @@ public class TestPerson {
 		Person p1 = new Person("Abc", 20);
 		Person p2 = new Person("Abc", 20);
 		
+		System.out.println(p1.hashCode());
+		System.out.println(p2.hashCode());
+		
 		System.out.println(p1.toString());
 		System.out.println(p1 == p2);
 		System.out.println(p1.equals(p2));
+		
+	    System.out.println(p1.equals("Abc"));
+	    
 	}
 
 }
