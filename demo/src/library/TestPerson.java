@@ -10,8 +10,9 @@ class Person {
 		this.age = age;
 	}
 	
+	@Override 
 	public int hashCode() {
-		return this.age; 
+		return 1; 
 	}
 
 	@Override
