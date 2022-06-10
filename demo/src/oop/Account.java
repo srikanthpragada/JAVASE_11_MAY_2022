@@ -23,6 +23,9 @@ public class Account {
 
 	// Methods
 	public void deposit(double amount) {
+		if (amount < 1) {
+			throw new IllegalArgumentException("Invalid amount");
+		}
 		this.balance += amount;
 	}
 
