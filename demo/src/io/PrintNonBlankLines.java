@@ -7,7 +7,7 @@ public class PrintNonBlankLines {
 
 	public static void main(String[] args) throws Exception {
 		 
-		FileReader fr = new FileReader("c:\\classroom\\old_man.txt");
+		FileReader fr = new FileReader("d:\\classroom\\may11\\names.txt");
 		BufferedReader br = new BufferedReader(fr);
 		
 		while(true) {
@@ -19,6 +19,7 @@ public class PrintNonBlankLines {
 		}
 		
 		fr.close(); 
+		br.close();
 	}
 
 }

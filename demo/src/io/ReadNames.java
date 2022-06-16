@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ReadNames {
 
 	public static void main(String[] args) throws IOException {
-		try (FileReader fr = new FileReader("c:\\classroom\\oct8\\names.txt")) {
+		try (FileReader fr = new FileReader("d:\\classroom\\may11\\names.txt")) {
 			int ch;
 
 			while (true) {

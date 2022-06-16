@@ -8,7 +8,13 @@ public class FileDemo {
 		File f = new File("d:\\classroom");
 		
 		System.out.println(f.exists());
-		System.out.println(f.isDirectory());
+		if(f.isDirectory())
+		{
+			for(File file : f.listFiles())
+			{
+				System.out.println(file.getAbsolutePath());
+			}
+		}
 		
 
 	}

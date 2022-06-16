@@ -6,18 +6,28 @@ import java.util.Scanner;
 
 public class MarksMenu {
 
-	public static void addMarks(RandomAccessFile raf)
+	public static void addMarks(RandomAccessFile raf)  throws Exception 
 	{
-		
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter Marks :");
+		int marks = s.nextInt();
+		raf.seek(raf.length());
+		raf.writeInt(marks);
 	}
 	
 	public static void listMarks(RandomAccessFile raf)
 	{
 		
 	}
-	public static void main(String[] args) throws FileNotFoundException {
+	
+	// Take rollno and new marks and update file 
+	public static void updateMarks(RandomAccessFile raf)  throws Exception 
+	{
+		
+	}
+	public static void main(String[] args) throws Exception {
 		RandomAccessFile raf = 
-				  new RandomAccessFile("d:\\classroom\\jan22\\marks.dat","rw");
+				  new RandomAccessFile("d:\\classroom\\may11\\marks.dat","rw");
 		Scanner s = new Scanner(System.in);
 		while(true)
 		{
@@ -36,7 +46,9 @@ public class MarksMenu {
 			            break;
 			  case 2 :  listMarks(raf);
 	            		break;			            
-			  case 4 :  System.exit(0);
+			  case 4 :  raf.close();
+			            System.out.println("Goodbye!!!");
+				        System.exit(0);
 			}
 		}
 
