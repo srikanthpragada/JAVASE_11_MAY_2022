@@ -9,7 +9,7 @@ import java.util.Collections;
 public class SortNamesFromFile {
 
 	public static void main(String[] args) throws IOException {
-		try (FileReader fr = new FileReader("c:\\classroom\\oct8\\names.txt")) {
+		try (FileReader fr = new FileReader("d:\\classroom\\may11\\names.txt")) {
 			var br  = new BufferedReader(fr);
 			var names = new ArrayList<String>();
 						
