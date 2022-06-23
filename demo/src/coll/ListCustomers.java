@@ -7,7 +7,7 @@ import java.util.TreeMap;
 public class ListCustomers {
 
 	public static void main(String[] args) throws Exception {
-		var lines = Files.readAllLines(Path.of("c:\\classroom\\customers.txt"));
+		var lines = Files.readAllLines(Path.of("d:\\classroom\\customers.txt"));
 		var customers = new TreeMap<String, String>();
 
 		for (String line : lines) {

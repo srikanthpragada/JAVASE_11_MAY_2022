@@ -20,5 +20,4 @@ public class SortWords2 {
 			System.out.println(w);
 		}
 	}
-
 }
