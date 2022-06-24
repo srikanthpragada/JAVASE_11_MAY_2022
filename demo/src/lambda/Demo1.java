@@ -12,6 +12,7 @@ public class Demo1 {
 		 for(int i  = 1; i <= 5; i ++)
              System.out.println(i);
 	}
+	
 	public static void main(String[] args) {
          Thread t1  = new Thread(new Task());
          t1.start();
