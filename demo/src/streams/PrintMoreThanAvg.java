@@ -7,7 +7,7 @@ public class PrintMoreThanAvg {
 
 	public static void main(String[] args) throws Exception {
 
-		Path p = Path.of("c:\\classroom\\oct8\\marks.txt");
+		Path p = Path.of("d:\\classroom\\marks.txt");
 
 		var avgMarks = 
 		   	  Files.lines(p)
@@ -16,6 +16,14 @@ public class PrintMoreThanAvg {
 		     .getAsDouble();
 		
 		System.out.println(avgMarks);
+		
+		Files.lines(p)
+		     .mapToInt(v -> Integer.parseInt(v)) 
+		     .filter( m -> m > avgMarks)
+		     .sorted()
+		     .forEach(System.out::println);
+		
+		
 		    
 	}
 

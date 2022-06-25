@@ -22,9 +22,9 @@ public class ArrayToStream {
 //		      .forEach( v -> System.out.println(v.toUpperCase()));
 		
 		Arrays.stream(names)
-		  .filter(v -> v.length() > 3)     // intermediate op
+		  .filter(v -> v.length() > 3)     // intermediate op - Predicate
 		  .sorted()                        // intermediate op 
-		  .limit(3)                        // intermediate op 
+		  .limit(3)
 	      .forEach(System.out::println);   // terminal op
 	}
 
