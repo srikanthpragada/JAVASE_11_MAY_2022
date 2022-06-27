@@ -4,19 +4,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.regex.Pattern;
 
-public class ListJavaFiles {
+public class CountJavaFiles {
 
 	public static void main(String[] args) throws Exception {
 		Path p = Path.of("d:\\classroom\\may11\\demo");
 		
-		Files.walk(p)
+		long count = Files.walk(p)
 		     .filter(f -> f.toString().endsWith(".java"))
-		     .forEach(System.out::println);
+		     .count();
+		
+		System.out.println(count);
 
 	}
-	
-//	public static boolean isJavaFile(Path p) {
-//		return p.toString().endsWith(".java");
-//	}
+ 
 
 }
